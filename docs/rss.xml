@@ -1,2 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>AZX的博客</title><link>https://AZX-473.github.io/AZX_473.github.io</link><description>没想到真的有人到这个私人博客，但...蟹蟹你付出时间。</description><copyright>AZX的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/222926920?v=4</url><title>avatar</title><link>https://AZX-473.github.io/AZX_473.github.io</link></image><lastBuildDate>Fri, 29 Aug 2025 05:54:28 +0000</lastBuildDate><managingEditor>AZX的博客</managingEditor><ttl>60</ttl><webMaster>AZX的博客</webMaster><item><title>内测</title><link>https://AZX-473.github.io/AZX_473.github.io/post/nei-ce.html</link><description>内测。</description><guid isPermaLink="true">https://AZX-473.github.io/AZX_473.github.io/post/nei-ce.html</guid><pubDate>Fri, 29 Aug 2025 05:50:56 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>AZX的博客</title><link>https://AZX-473.github.io/AZX_473.github.io</link><description>没想到真的有人到这个私人博客，但...蟹蟹你付出时间。</description><copyright>AZX的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/222926920?v=4</url><title>avatar</title><link>https://AZX-473.github.io/AZX_473.github.io</link></image><lastBuildDate>Fri, 29 Aug 2025 06:10:46 +0000</lastBuildDate><managingEditor>AZX的博客</managingEditor><ttl>60</ttl><webMaster>AZX的博客</webMaster><item><title>一些C++代码函数/块集合</title><link>https://AZX-473.github.io/AZX_473.github.io/post/yi-xie-C%2B%2B-dai-ma-han-shu---kuai-ji-he.html</link><description>#### 判断素数 $O(\sqrt n)$
+```cpp
+bool isprime(int n) {
+    if (n &lt; 2) return false;
+    for (int i = 2; i &lt;= n / i; i ++)
+        if (n % i == 0) return false;
+    return true;
+}
+```
+
+#### 最大公约数GCD $O(log n)$
+```cpp
+int gcd(int a, int b) {
+    if (!b) return a;
+    return gcd(b, a % b);
+}
+int lcm = (long long)a * b / gcd(a, b); // 最小公倍数
+```
+
+#### 分解质因数 $O(\sqrt n)$
+
+```cpp
+for (int j = 2; j &lt;= x / j; j ++)
+    while (x % j == 0) {
+        cnt[j] ++;
+        x /= j;
+    }
+if (x &gt; 1) cnt[x] ++;
+```
+
+#### 欧拉筛 $O(n)$ 
+```cpp
+int primes[N / 10], f[N], cnt;
+for (int i = 2; i &lt; N; i ++) {
+    if (!st[i]) primes[ ++ cnt] = i;
+    for (int j = 1; i * primes[j] &lt; N; j ++) {
+        st[i * primes[j]] = true;
+        if (i % primes[j] == 0) break;
+    }
+}
+```
+
+#### 快速幂 $O(log k)$
+```cpp
+int qmi(int a, int k) {
+    int ans = 1;
+    while (k) {
+        if (k &amp; 1) ans = (LL)ans * a % mod;
+        k &gt;&gt;= 1;
+        a = (LL)a * a % mod;
+    }
+    return ans;
+}
+```
+
+#### 快速幂预处理阶乘/阶乘逆元求组合数 $O(nlogn + m)$
+```cpp
+int qmi(int a, int k) {
+    int ans = 1;
+    while (k) {
+        if (k &amp; 1) ans = (LL)ans * a % mod;
+        k &gt;&gt;= 1;
+        a = (LL)a * a % mod;
+    }
+    return ans;
+}
+int fact[N], infact[N];
+void init(int n) {
+    fact[0] = infact[0] = 1;
+    for (int i = 1; i &lt;= n; i ++) {
+        fact[i] = (LL)fact[i - 1] * i % mod;
+        infact[i] = qmi(fact[i], mod - 2);
+    }
+}
+int C(int n, int m) {
+    return (LL)fact[n] * infact[n - m] % mod * infact[m] % mod;
+}
+```
+
+#### 递推预处理阶乘/阶乘逆元求组合数 $O(n + m)$
+```cpp
+int fact[N], inv[N], infact[N];
+void init(int n) {
+    fact[0] = infact[0] = fact[1] = infact[1] = inv[1] = 1;
+    for (int i = 2; i &lt;= n; i ++) {
+        fact[i] = (LL)fact[i - 1] * i % mod;
+        inv[i] = (mod - (LL)mod / i * inv[mod % i] % mod) % mod;
+        infact[i] = (LL)infact[i - 1] * inv[i] % mod;
+    }
+}
+int C(int n, int m) {
+    return (LL)fact[n] * infact[n - m] % mod * infact[m] % mod;
+}
+```。</description><guid isPermaLink="true">https://AZX-473.github.io/AZX_473.github.io/post/yi-xie-C%2B%2B-dai-ma-han-shu---kuai-ji-he.html</guid><pubDate>Fri, 29 Aug 2025 06:10:13 +0000</pubDate></item><item><title>内测</title><link>https://AZX-473.github.io/AZX_473.github.io/post/nei-ce.html</link><description>内测。</description><guid isPermaLink="true">https://AZX-473.github.io/AZX_473.github.io/post/nei-ce.html</guid><pubDate>Fri, 29 Aug 2025 05:50:56 +0000</pubDate></item></channel></rss>
