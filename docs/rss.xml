@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>AZX的博客</title><link>https://AZX-473.github.io/AZX_473.github.io</link><description>没想到真的有人到这个私人博客，但...蟹蟹你付出时间。</description><copyright>AZX的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/222926920?v=4</url><title>avatar</title><link>https://AZX-473.github.io/AZX_473.github.io</link></image><lastBuildDate>Fri, 29 Aug 2025 11:22:29 +0000</lastBuildDate><managingEditor>AZX的博客</managingEditor><ttl>60</ttl><webMaster>AZX的博客</webMaster><item><title>花，花！（无厘头）</title><link>https://AZX-473.github.io/AZX_473.github.io/post/hua-%EF%BC%8C-hua-%EF%BC%81%EF%BC%88-wu-li-tou-%EF%BC%89.html</link><description>好吧，其实没什么
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>AZX的博客</title><link>https://AZX-473.github.io/AZX_473.github.io</link><description>没想到真的有人到这个私人博客，但...蟹蟹你付出时间。</description><copyright>AZX的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/222926920?v=4</url><title>avatar</title><link>https://AZX-473.github.io/AZX_473.github.io</link></image><lastBuildDate>Sat, 30 Aug 2025 00:19:54 +0000</lastBuildDate><managingEditor>AZX的博客</managingEditor><ttl>60</ttl><webMaster>AZX的博客</webMaster><item><title>一些链接</title><link>https://AZX-473.github.io/AZX_473.github.io/post/yi-xie-lian-jie.html</link><description>### [github](https://github.com/AZX-473) 
+
+### [github开源本网站](https://github.com/AZX-473/AZX_473.github.io)
+
+### [洛谷](https://www.luogu.com.cn/user/1145424)
+
+### 微信: Azx2012_
+
+### QQ: 2421446371。</description><guid isPermaLink="true">https://AZX-473.github.io/AZX_473.github.io/post/yi-xie-lian-jie.html</guid><pubDate>Sat, 30 Aug 2025 00:19:24 +0000</pubDate></item><item><title>花，花！（无厘头）</title><link>https://AZX-473.github.io/AZX_473.github.io/post/hua-%EF%BC%8C-hua-%EF%BC%81%EF%BC%88-wu-li-tou-%EF%BC%89.html</link><description>好吧，其实没什么
 
 &lt;!-- Failed to upload '可爱花花.mp4' --&gt;。</description><guid isPermaLink="true">https://AZX-473.github.io/AZX_473.github.io/post/hua-%EF%BC%8C-hua-%EF%BC%81%EF%BC%88-wu-li-tou-%EF%BC%89.html</guid><pubDate>Fri, 29 Aug 2025 11:21:56 +0000</pubDate></item><item><title>一些C++代码函数/块集合</title><link>https://AZX-473.github.io/AZX_473.github.io/post/yi-xie-C%2B%2B-dai-ma-han-shu---kuai-ji-he.html</link><description>#### 判断素数 $O(\sqrt n)$
 ```cpp
